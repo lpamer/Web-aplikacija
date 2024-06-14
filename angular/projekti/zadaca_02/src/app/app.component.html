@@ -1,0 +1,16 @@
+<nav>
+  <h1>Serije Online</h1>
+  <a routerLink="/pocetna" (click)="putanja='pocetna'">Popis serija</a>
+  <a routerLink="/favoriti" (click)="putanja='favoriti'" (click)="provjeraFavoriti()">Favoriti</a>
+  <a routerLink="/korisnici" (click)="putanja='korisnici'" (click)="provjeraKorisnici()">Korisnici</a>
+  <a routerLink="/dokumentacija" (click)="putanja='dokumentacija'">Dokumentacija</a>
+  <a routerLink="/registracija" (click)="putanja='registracija'" (click)="provjeraRegistracija()">Registracija</a>
+  <a routerLink="/profil" (click)="putanja='profil'" (click)="provjeraProfil()">Profil</a>
+  <a routerLink="/prijava" (click)="putanja='prijava'">Prijava</a>
+  <a routerLink="/prijava" (click)="putanja='prijava'" (click)="odjava()">Odjava</a>
+
+</nav>
+<main>
+  <router-outlet></router-outlet>
+</main>
+<footer>Luka Pamer &copy; 2024</footer>

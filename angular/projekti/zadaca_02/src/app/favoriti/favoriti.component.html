@@ -1,0 +1,14 @@
+<body>
+    <h2>Popis favorita</h2>
+    <ul class="serije-lista">
+        <li *ngFor="let f of favoriti" class="serija-item">
+            <div>
+                <span class="serija-ime">NAZIV SERIJE: {{f.ime}}</span> <br>
+                <span class="serija-opis">OPIS SERIJE: {{f.opis_serije}}</span>
+                <a [routerLink]="['/favoritiDetalji', f.id_serija]">
+                    Prikaži više
+                </a>
+            </div>
+        </li>
+    </ul>
+</body>

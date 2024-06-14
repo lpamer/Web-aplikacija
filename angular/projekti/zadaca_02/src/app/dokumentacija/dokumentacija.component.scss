@@ -1,0 +1,76 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  padding: 20px;
+  background-color: #f2f2f2;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  font-size: 24px;
+}
+
+img {
+  max-width: 100px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+.labela_dokumentacija {
+  text-align: center;
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+#sadrzaj {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+
+  th,
+  td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #333;
+    color: #fff;
+  }
+}
+
+.sadrzaj {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+
+  th,
+  td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #333;
+    color: #fff;
+  }
+}
+
+ol {
+  list-style-type: decimal;
+  margin-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}

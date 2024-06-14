@@ -1,0 +1,17 @@
+<body>
+    <h2>Tražilica serija</h2>
+    <div class="trazilica">
+        <input type="text" [(ngModel)]="filter" (ngModelChange)="dohvatiPonovo()" placeholder="Pretraži serije...">
+    </div>
+    <ul class="serije-lista">
+        <li *ngFor="let s of serije" class="serija-item">
+            <div>
+                <span class="serija-nime">NAZIV SERIJE: {{s.name}}</span> <br>
+                <span class="serija-opis">OPIS SERIJE: {{s.overview}}</span>
+                <a [routerLink]="['/serijaDetalji', s.id]">
+                    Prikaži više
+                </a>
+            </div>
+        </li>
+    </ul>
+</body>

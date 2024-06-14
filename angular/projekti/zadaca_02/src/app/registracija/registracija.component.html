@@ -1,0 +1,33 @@
+<body>
+    <div class="forma">
+        <h2>Registracija korisnika</h2>
+
+        <form [formGroup]="registrationForm" (ngSubmit)="register()">
+            <div>
+                <label for="ime">Ime:</label>
+                <input type="text" id="ime" formControlName="ime">
+            </div>
+            <div>
+                <label for="prezime">Prezime:</label>
+                <input type="text" id="prezime" formControlName="prezime">
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" formControlName="email">
+            </div>
+            <div>
+                <label for="password">Lozinka:</label>
+                <input type="password" id="password" formControlName="password">
+            </div>
+            <div>
+                <label for="username">Korisničko ime:</label>
+                <input type="text" id="username" formControlName="username">
+            </div>
+            <div>
+                <label for="tip_korisnika_id">Tip korisnika:</label>
+                <input type="number" id="tip_korisnika_id" formControlName="tip_korisnika_id">
+            </div>
+            <button type="submit" [disabled]="registrationForm.invalid">Registriraj se</button>
+        </form>
+    </div>
+</body>

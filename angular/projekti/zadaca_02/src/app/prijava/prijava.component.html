@@ -1,0 +1,22 @@
+<body>
+    <div class="forma">
+        <h2>Prijava</h2>
+        <script src="https://www.google.com/recaptcha/api.js?render=SITE_KEY"></script>
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+            <div>
+                <label for="username">Korisničko ime:</label>
+                <input type="text" id="username" formControlName="username">
+            </div>
+            <div>
+                <label for="password">Lozinka:</label>
+                <input type="password" id="password" formControlName="password">
+            </div>
+            <div>
+                <p>Admin: <br> Korisničko ime:admin <br> Lozinka:admin</p>
+                <p>Obican: <br> Korisničko ime:obican <br> Lozinka:obican</p>
+            </div>
+            <button type="submit" [disabled]="loginForm.invalid">Prijavi se</button>
+        </form>
+        <button type="button" (click)="loginGitHub()">GitHub prijava</button>
+    </div>
+</body>

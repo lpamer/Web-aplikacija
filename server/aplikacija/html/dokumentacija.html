@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <title>Dokumentacija</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="lpamer.css">
+    <script src="/js/dokumentacija.js"></script>
+</head>
+
+<body>
+    <header>Dokumentacija</header>
+    <nav>#navigacija#</nav>
+
+
+
+    <img src="slika_ikona.jpg" alt="ikona" width="100" height="100">
+    <br>
+    <br>
+    <div class="labela_dokumentacija">
+        <label for="autor">Autor</label>
+        <br>
+        <br>
+        <label for="ime_prezime">Luka Pamer</label>
+        <br>
+        <br>
+        <label for="email">lpamer20@student.foi.hr</label>
+        <br>
+        <br>
+    </div>
+    <img id="moja-slika" src="ERA.png" alt="Opis slike" width="100" height="100">
+    <br>
+    <br>
+
+    <table id="sadrzaj">
+
+        <tr>
+            <th>Resurs
+                Parametri
+            </th>
+            <th>GET
+                čitanje</th>
+            <th>POST
+                kreiranje</th>
+            <th>PUT
+                ažuriranje</th>
+            <th>DELETE
+                brisanje
+            </th>
+        </tr>
+        <tr>
+            <td>baza/korisnici</td>
+            <td>vraća sve korisnike (200) </td>
+            <td>kreira novog
+                korisnika (201)
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>baza/korisnici
+                /{korime}
+            </td>
+            <td>vraća podatke određenog
+                korisnika (200)</td>
+            <td>“zabranjeno” (405) </td>
+            <td>ažurira
+                određenog
+                korisnika
+                (201)</td>
+            <td>briše
+                jednog
+                korisnika
+                (201)
+            </td>
+        </tr>
+        <tr>
+            <td>baza/korisnici
+                /{korime}/prijava
+                NE TRAŽI VALIDAN
+                JWT
+            </td>
+            <td>Vraća JWT token u
+                zaglavlju ako postoji
+                sesija (201). Ako ne
+                postoji sesija javlja
+                “zabranjen pristup” (401)</td>
+            <td>Provjerava podatke
+                prijave, ako su
+                ispravni kreira sesiju.
+                (201)
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>baza/favoriti</td>
+            <td>Vraća sve podatke serija
+                spremljenih u favorite
+                prijavljenog korisnika
+                (200)</td>
+            <td>Dodaje novu seriju u
+                favorite prijavljenog
+                korisnika (201)
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>baza/favoriti/{id}</td>
+            <td>Vraća sve podatke tražene
+                serije u favoritima
+                prijavljenog korisnika
+                (200)</td>
+            <td>“zabranjeno” (405) </td>
+            <td>“zabranjeno”
+                (405)
+            </td>
+            <td>Briše seriju
+                iz favorita
+                (201)
+            </td>
+        </tr>
+        <tr>
+            <td>baza/dnevnik
+                ?stranica=broj
+                &sortiraj=[d | m]
+                [&datumOd=datum]
+                [&datumDo=datum]
+                [&vrijemeOd=vrijeme]
+                [&vrijemeDo=vrijeme]
+            </td>
+            <td>vraća podatke loga za
+                neku stranicu (broj),
+                opcionalno filtrirano po
+                vremenskom periodu
+                (moguće sve kombinacije
+                datuma i vremena od ili
+                do), te podatke dobiva
+                sortirano silazno po
+                “datumu i vremenu” (d) ili
+                uzlazno po metodi (m)
+                (200)
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+
+    </table>
+    <br>
+    <br>
+    <table class="sadrzaj">
+        <tr>
+            <th>Uloga </th>
+            <th>Stranica/e </th>
+            <th>Opis
+            </th>
+        </tr>
+
+
+        <tr>
+            <td>Gost </td>
+            <td>Početna</td>
+            <td>Prikazuje tražilicu serija po nazivu. Na početku nema ničega već samo jedno
+                tekstualno polje, tek kad se unese barem 3 znaka počinju se slati zahtjevi prema
+                TMDB servisu. Servis u svom odgovoru sadrži informaciju o broju stranica
+                (total_pages) i broju nađenih serija (total_results). Servis ako ima puno podataka
+                uvijek vraća uvijek jednaki broj serija po stranici osim zadnje stranice. Potrebno je
+                prilagoditi broj vraćenih serija temeljem parametra appStranicenje. Na primjer ako
+                servis vrati 20 zapisa i ima 10 stranica, a u appStranicenje piše 5 treba prikazati
+                samo 5 zapisa i 40 stranica. Ako u appStrnicenje piše 40 treba prikazati 40 zapisa i
+                5 stranica.
+                Kod prikaza se prikazuje naziv (name) serije, opis (overview) i gumb na detalje
+                serije.
+            </td>
+        </tr>
+        <tr>
+            <td>Gost /
+                Korisnik</td>
+            <td>SerijaDetalji </td>
+            <td>Prikazuje detalje odabrane serije. Prikazuju se naziv (name), opis (overview), broj
+                sezona, broj epizoda, popularnost, slika (poster_path), poveznica na vanjsku
+                stranicu (homepage).
+                Ako je korisnik prijavljen dolje se nalazi gumb spremi koji sprema barem ove
+                podatke (plus tmdb id) serije u bazu ako ne postoji kao i informacije o sezonama
+                (minimalno: naziv (name), opis (overview), slika (poster_path), broj sezone, broj
+                epizoda u sezoni, tmdb id sezone). Te nakon toga dodaje seriju u favorite tom
+                korisniku. Ako serija postoji u bazi tada ju samo dodaje u favorite korisniku.
+            </td>
+        </tr>
+        <tr>
+            <td>Gost</td>
+            <td>Dokumentacija</td>
+            <td>Prikazuje stranicu dokumentacija.html opisanu ranije.</td>
+        </tr>
+        <tr>
+            <td>Gost </td>
+            <td>Prijava, Odjava </td>
+            <td>Korisnik se može prijaviti ili odjaviti.</td>
+        </tr>
+        <tr>
+            <td>Korisnik </td>
+            <td>Profil</td>
+            <td>Vidi svoje podatke (ime, prezime, korisničko ime, e-mail, …) i može ih ažurirati.
+                Korisničko ime i e-mail se ne mogu ažurirati.</td>
+        </tr>
+        <tr>
+            <td>Korisnik </td>
+            <td>Favoriti</td>
+            <td>Vidi popis serija koje ima u favoritima u bazi. Klikom na seriju može vidjeti detalje
+                svog favorita.
+            </td>
+        </tr>
+        <tr>
+            <td>Korisnik</td>
+            <td>FavoritDetalji </td>
+            <td>Prikazuje sve informacije o seriji i informacije o svakoj sezoni serije koje ima u
+                bazi. Slike se prikazuju kao slike ne samo putanje iz baze</td>
+        </tr>
+        <tr>
+            <td>Admin </td>
+            <td>Registracija </td>
+            <td>Gost se ne može samostalno registrirati kao novi korisnik već to radi admin. Kod
+                dodavanja mora obavezno unjeti email, korisničko ime i lozinku. Opcionalno može
+                unijeti ime, prezime i još barem 3 druga podatka po vlastitom odabiru. Korisnik
+                admin mora biti unaprijed dodan u bazu. Kod registracije šalje se e-mail korisniku
+                sa informacijom da je registrian i koje mu je korisničko ime i lozinka. Lozinka se u
+                bazu ne smije spremati u čitljivom obliku i treba koristiti sol kod spremanja</td>
+        </tr>
+        <tr>
+            <td>Admin </td>
+            <td>Korisnici</td>
+            <td>Vidi podatke svih korisnika i može obrisati nekog korisnika, pri čemu se brišu svi
+                njegovi favoriti. Glavni korisnik admin se ne može obrisati i to treba blokirati.</td>
+        </tr>
+        <tr>
+            <td>Admin </td>
+            <td>Dnevnik</td>
+            <td>Vidi pregled dnevnika u obliku tablice. Podaci su inicijalno sortirani po datumu
+                silazno. Može sortirati podatke uzlazno po metodi (GET, POST, PUT, DELETE).
+                Može podatke filtirati pod datumuOd, vremenuOd, datumuDo i/ili vremenuDo.
+                Bilo koja kombinacija filtriranja je moguća, ako ništa nike uneseno dobiju se svi
+                podaci, a svaki filter radi veću restrikciju. Potrebno je napraviti straničenje</td>
+        </tr>
+
+    </table>
+
+    <footer>
+        <a href="https://validator.w3.org/"><img src="./../../dokumentacija/html_validacija.png"
+                alt="html_validacija"></a>
+        <a href="https://jigsaw.w3.org/css-validator/"><img src="./../../dokumentacija/css_validacija.png"
+                alt="css_validator" width="180px"></a>
+    </footer>
+</body>
+
+</html>

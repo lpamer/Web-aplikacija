@@ -1,0 +1,54 @@
+nav {
+  background-color: #333;
+  color: #d60505;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+
+    display: inline-block;
+    margin: 0 auto;
+    padding: 10px;
+    width: 200px;
+    box-sizing: border-box;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  h1 {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+
+    display: inline-block;
+    margin: 0 auto;
+    padding: 10px;
+    width: 200px;
+    box-sizing: border-box;
+  }
+}
+
+::ng-deep body,
+::ng-deep html {
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: rgb(245, 245, 244);
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: rgb(253, 253, 253);
+}

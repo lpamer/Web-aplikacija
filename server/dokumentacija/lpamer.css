@@ -1,0 +1,164 @@
+body {
+	font-family: Arial;
+	margin: 0;
+	background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+}
+
+header {
+	padding: 30px;
+	text-align: center;
+	background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+	color: white;
+	font-size: 30px;
+}
+nav {
+	padding: 20px;
+	text-align: center;
+	background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+	font-size: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+	color: #04aa6d;
+}
+main {
+	height: 100vh;
+	width: 100%;
+	background: #0f2027; /* fallback for old browsers */
+	background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	color: #fff;
+}
+
+footer {
+	height: 100vh;
+	width: 100%;
+	background: #0f2027; /* fallback for old browsers */
+	background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	color: #fff;
+}
+
+.form__input {
+	font-family: "Roboto", sans-serif;
+	color: #333;
+	font-size: 1.2rem;
+	margin: 0 auto;
+	background-color: #c0d7ce;
+	border: gray;
+	width: 200px;
+	padding-bottom: 2%;
+
+	border-bottom: 0.3rem solid transparent;
+	transition: all 0.3s;
+}
+
+.content {
+	padding: 20px;
+}
+
+#sadrzaj {
+	font-family: Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+	height: 90%;
+	display: flex;
+	justify-content: center;
+	color: white;
+}
+
+#sadrzaj td,
+#sadrzaj th {
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+
+#sadrzaj th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #04aa6d;
+	color: white;
+}
+
+.sadrzaj {
+	font-family: Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+	height: 90%;
+	display: flex;
+	justify-content: center;
+	color: white;
+}
+
+.sadrzaj td,
+.sadrzaj th {
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+
+.sadrzaj th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #04aa6d;
+	color: white;
+}
+
+#sadrzaj_detalji {
+	font-family: Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+	height: 30%;
+	display: flex;
+	justify-content: center;
+	color: white;
+}
+
+#sadrzaj_detalji td,
+#sadrzaj_detalji th {
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+
+#sadrzaj_detalji th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #04aa6d;
+	color: white;
+}
+
+#stranicenje button {
+	background-color: #04aa6d;
+}
+
+.gumb {
+	background-color: #04aa6d;
+}
+
+img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 200px;
+	height: 200px;
+}
+
+.labela_dokumentacija {
+	color: white;
+	display: block;
+	position: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 200px;
+	height: 200px;
+}

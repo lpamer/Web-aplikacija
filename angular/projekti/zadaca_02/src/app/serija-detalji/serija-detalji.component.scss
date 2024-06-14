@@ -1,0 +1,35 @@
+.serija-detalji {
+  text-align: center;
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .dodaj-favorita {
+    margin-bottom: 20px;
+
+    button {
+      background-color: #3498db;
+      color: white;
+      padding: 8px;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken(#3498db, 10%);
+      }
+    }
+  }
+
+  h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  img {
+    max-width: 50%;
+    height: auto;
+    margin: 20px auto;
+  }
+}

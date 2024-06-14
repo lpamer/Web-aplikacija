@@ -1,0 +1,25 @@
+{
+	"name": "vjezba_03",
+	"version": "1.0.0",
+	"description": "",
+	"main": "server.mjs",
+	"scripts": {
+		"pripremi": "npm link --save express sqlite3 express-session cookie-parser",
+		"start": "node server.mjs rwa_lpamer20_conf.csv",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Luka Pamer",
+	"license": "ISC",
+	"dependencies": {
+		"base32-encoding": "^1.0.0",
+		"cookie-parser": "file:C:/Users/Administrator/AppData/Roaming/npm/node_modules/cookie-parser",
+		"cors": "^2.8.5",
+		"express": "file:C:/Users/Administrator/AppData/Roaming/npm/node_modules/express",
+		"express-session": "file:C:/Users/Administrator/AppData/Roaming/npm/node_modules/express-session",
+		"jsonwebtoken": "^9.0.2",
+		"node-fetch": "^2.7.0",
+		"nodemailer": "^6.9.7",
+		"sqlite3": "file:C:/Users/Administrator/AppData/Roaming/npm/node_modules/sqlite3",
+		"totp-generator": "^0.0.14"
+	}
+}

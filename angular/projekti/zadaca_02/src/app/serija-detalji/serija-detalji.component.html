@@ -1,0 +1,15 @@
+<body>
+    <div class="serija-detalji">
+        <h1>Naziv: {{naziv}}</h1> <br>
+        <h2 class="dodaj-favorita">
+            Dodaj seriju u favorite:
+            <button (click)="provjeraBaze()">Spremi u favorite</button>
+        </h2>
+        <h2>Opis: </h2>{{opis}} <br>
+        <h2>Broj sezona: </h2>{{serijaSezona}} <br>
+        <h2>Broj epizoda: </h2>{{serijaEpizoda}} <br>
+        <h2>Popularnost serije: </h2>{{serijaPopularnost}} <br>
+        <h2>Poveznica: </h2>{{serijaPoveznica}} <br>
+        <img id="slika" [src]="'https://image.tmdb.org/t/p/w500' + slikaUrl" alt="Poster"> <br>
+    </div>
+</body>

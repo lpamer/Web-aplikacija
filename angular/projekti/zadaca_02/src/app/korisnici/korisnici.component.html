@@ -1,0 +1,16 @@
+<body>
+    <div class="sadrzaj">
+        <div class="korisnici">
+            <h2>Popis korisnika</h2>
+            <ul>
+                <li *ngFor="let k of korisnici">
+                    Ime i prezime: {{k.ime}} {{k.prezime}}<br>
+                    Korisničko ime: {{k.username}}<br>
+                    Email: {{k.email}}<br>
+                    Tip korisnika: {{k.tip_korisnika_id}}
+                    <button (click)="brisanje(k.username)">Briši</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
